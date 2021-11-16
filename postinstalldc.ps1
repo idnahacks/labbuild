@@ -1,3 +1,6 @@
+if ((Test-Path -path "C:\Packages\Plugins\Microsoft.Compute.CustomScriptExtension\1.10.12\Downloads\7\postinstalldc.ps1") -eq "$true") {
+    remove-item -path "C:\Packages\Plugins\Microsoft.Compute.CustomScriptExtension\1.10.12\Downloads\7\postinstalldc.ps1" -force
+}
 if ((Test-Path -path "c:\labscripts\vulnad.ps1") -eq "$true") {
     remove-item -path "c:\labscripts\vulnad.ps1" -force
 }
