@@ -15,3 +15,5 @@ Set-Service -name ADWS -StartupType Automatic -Status Running
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/thegoatreich/vulnerable-AD/master/vulnad.ps1" -outfile "c:\labscripts\vulnad.ps1"
 Import-Module "c:\labscripts\vulnad.ps1"
 Invoke-VulnAD -UsersLimit 666 -DomainName "lab.local"
+
+New-ADOrganizationalUnit -Name "Workstations" -Path "OU=Workstations,DC=lab,DC=local"
