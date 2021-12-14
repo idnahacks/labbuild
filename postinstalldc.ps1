@@ -11,7 +11,7 @@ if ((Test-Path -path "c:\labscripts") -eq $false) {
 add-windowsfeature -name RSAT-ADDS-Tools
 Set-Service -name ADWS -StartupType Automatic -Status Running
 
-start-sleep -seconds 60
+start-sleep -seconds 300
 
 ###Vuln-AD
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/thegoatreich/vulnerable-AD/master/vulnad.ps1" -outfile "c:\labscripts\vulnad.ps1"
